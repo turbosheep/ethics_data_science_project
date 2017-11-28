@@ -39,16 +39,16 @@ As we address each of these eight points, the format shall be as follows. We'll 
 
 
 
-\section{Credible sources: Zane}
-The first method in combatting the spreading of fake news is to check whether the article in question comes from a credible source. It's important to distinguish this from point three which states to check the credibility of the \textit{author}. Here we're focused on the credibility of the \textit{website}. To start off, we'll examine the utility if Facebook chose \textit{not to} implement this source credibility check. Although Facebook currently implements a very light form of censorship (CITE), the scenario would be quite similar to how Facebook currently monitors articles, which is very little. While most articles that Facebook feeds users are based off of topics that they've shown interest in, nearly every Facebook user has probably been shown an article from an underground website that someone on their friends list has liked or shared. If Facebook didn't implement source credibility prioritization, then the effect of one person sharing an article like this can have quite a negative outcome. The article in question can easily make its way to hundreds of people.
+\section{Credible sources: Sites and Authors}
+The first method in combatting the spreading of fake news is to check whether the article in question comes from a credible source. This involves not just the author, the site itself. To start off, we'll examine the utility if Facebook chose \textit{not to} implement this source credibility check. Although Facebook currently implements a very light form of censorship (CITE), the scenario would be quite similar to how Facebook currently monitors articles, which is very little. While most articles that Facebook feeds users are based off of topics that they've shown interest in, nearly every Facebook user has probably been shown an article from an underground website that someone on their friends list has liked or shared. If Facebook didn't implement source credibility prioritization, then the effect of one person sharing an article like this could have quite a negative outcome. The article in question can easily make its way to hundreds of people. For most fake news articles, this has the effect of increasing the amount of negative utility, as most fake news articles are spread with negative motives.
 
-Now assume Facebook was to implement source credibility prioritization. In this same scenario, if someone was to like or share a post, Facebook could first check its feedback for that particular site. If there is enough feedback for the cite, and the score is negative, Facebook could deprioritize the site on other people's news feeds by a factor of the magnitude of the negative score. Likewise, if the cite has a positive score, Facebook could choose to display the article as it normally would, or maybe even prioritize it higher. From a utility perspective, this has the potential to significantly reduce negative utility brought about by fake cites. On the other hand, there does exist the potential to filter out some cites which many people may find to be \textit{good}. In other words, this has the potential to significantly decrease negative utility, with a smaller side effect of decreasing some positive utility. From an overall perspective however, implementing source credibility prioritization has the net effect of decreasing negative utility
+Now assume Facebook was to implement source credibility prioritization. In this same scenario, if someone was to like or share a post, Facebook could first check its feedback for that particular site and/or author. If there is enough feedback, and the score is negative, Facebook could deprioritize the article on other people's news feeds by a factor of the magnitude of the negative score. Likewise, if the site or author has a positive score, Facebook could choose to display the article as it normally would, or maybe even prioritize it higher. From a utility perspective, this has the potential to significantly reduce negative utility brought about by fake cites. On the other hand, there does exist the potential to filter out some cites which many people may find to be \textit{good}. In other words, this has the potential to significantly decrease negative utility, with a smaller side effect of decreasing some positive utility. From an overall perspective however, implementing source credibility prioritization has the net effect of decreasing negative utility
 
 In terms of the technical feasibility of this point, we feel like it one of the lowest hanging fruit in the pursuit of diminishing fake news. Once possibility would involve Facebook storing a few metrics for a site based upon feedback received by readers. Facebook already has a way to flag particular articles as inappropriate. In the same way, Facebook could allow a reader to optionally rate the credibility of the article or the site in general, and use these ratings to prioritize and deprioritize sites.
 
 
-\section{Reading Beyond the Headline}
 
+\section{Reading Beyond the Headline}
 When posting an external link to Facebook, information is drawn from the content inside \texttt{meta} elements of the page source by Facebook's web crawler and placed into a preview on the post itself. If an element labeled according to the Open Graph protocol, the crawler will place it in the link preview on the site \cite{fbwebmaster}. With this system in place, every linked website will appear the same on a users news feed. Any site can determine how its posts show up when linked on Facebook, regardless of the quality of the content or site itself. \\
 
 \begin{figure}[h]
@@ -67,13 +67,20 @@ This uniform formatting treats {\it NPR} and {\it Infowars} or any other site th
 
 In addition, because the information taken by the Facebook crawler is entirely determined by the web developer, the headline, picture, and description can be completely misleading.
 
+
+
 \section{Author Credibility: Zane}
+
+
+
 \section{Age of the Article: Hannah}
 Considering the age of the article is an important aspect of identifying fake news. Both very recent articles and older articles can be subject to scrutiny.
 
 Manipulating trending topics with new, uninformed articles
 
 quoting old sources with no date
+
+
 
 \section{Article Genre: Hannah}
 
@@ -83,14 +90,23 @@ new yorker, sometime satire,
 
 "just a joke" defense for harassment, 
 
+
+
 \section{Interpretation Bias: Hannah}
 
 facebook demographics, http://journals.sagepub.com/doi/abs/10.1177/2053168017720008
 
 trending topic staff fired, https://www.theguardian.com/technology/2016/aug/29/facebook-fires-trending-topics-team-algorithm
 
+
+
 \section{Article Sources: Zane}
+
+
+
 \section{Cross Reference: Zane}
+
+
 
 \paragraph{Final utility based on points above}
 
