@@ -31,10 +31,8 @@ Rapidly spreading fake news articles have a range of consequences, one instance 
 
 As an increasingly global and hotly contested issue, we would like to to explore what responsibility Facebook has in regards to these eight points. We will discuss whether they have a responsibility to develop tools to detect fake news based off these guidelines and, if these tools exist, whether they should be used to remove content from the site.
 
-\paragraph{}
 When analyzing any issue, it's important to define what framework you're working in, along with what premisses your arguments are based on. During our analyzation of the Facebook's role in censorship, we'll be working under a utilitarian framework. In particular, we'll be using a utilitarian framework designed to minimize the harm. We have chosen this particular form of utilitarianism for a few different reasons. If you examine the role that fake news has played in the numerous events mentioned, it's evident that the outcome is negative in a large majority of occurrences. It's true that news in general on Facebook has the potential to result in positive utility among its readers, but as we've seen, more often than not the potential negatives don't come close to outweighing the corresponding positives. As a result, while it's important to attempt to maintain the positive utility brought about by Facebook's news feeds, we believe that it's far more important to try to minimize the corresponding negative utility.
 
-\paragraph{}
 As we address each of these eight points, the format shall be as follows. We'll first examine the outcome if Facebook chose not to implement this fake news filtering mechanism. Next, we'll examine the outcome if Facebook chose to implement the mechanism. Lastly, we'll weigh the different utilities and select the one that we feel minimizes the negative utility. In addition to this, we'll also be examining whether or not the method is even technically feasible to implement. The final outcome for each point will be a combination of the two points. 
 
 
@@ -44,7 +42,9 @@ The first method in combatting the spreading of fake news is to check whether th
 
 Now assume Facebook was to implement source credibility prioritization. In this same scenario, if someone was to like or share a post, Facebook could first check its feedback for that particular site and/or author. If there is enough feedback, and the score is negative, Facebook could deprioritize the article on other people's news feeds by a factor of the magnitude of the negative score. Likewise, if the site or author has a positive score, Facebook could choose to display the article as it normally would, or maybe even prioritize it higher. From a utility perspective, this has the potential to significantly reduce negative utility brought about by fake cites. On the other hand, there does exist the potential to filter out some cites which many people may find to be \textit{good}. In other words, this has the potential to significantly decrease negative utility, with a smaller side effect of decreasing some positive utility. From an overall perspective however, implementing source credibility prioritization has the net effect of decreasing negative utility
 
-In terms of the technical feasibility of this point, we feel like it one of the lowest hanging fruit in the pursuit of diminishing fake news. Once possibility would involve Facebook storing a few metrics for a site based upon feedback received by readers. Facebook already has a way to flag particular articles as inappropriate. In the same way, Facebook could allow a reader to optionally rate the credibility of the article or the site in general, and use these ratings to prioritize and deprioritize sites.
+In terms of the technical feasibility of this point, we feel like it one of the lowest hanging fruit in the pursuit of diminishing fake news. Once possibility would involve Facebook storing a few metrics for a site based upon feedback received by readers. Facebook already has a way to flag particular articles as inappropriate. In the same way, Facebook could allow a reader to optionally rate the credibility of the article or the site in general, and use these ratings to prioritize and deprioritize sites. 
+
+Lastly, there's the idea of checking whether or not the author of an article is indeed a real person, and is indeed who they claim to be. We feel that this would be a much more difficult task for Facebook to implement. Additionally, while author authentication is a concept that would indeed help lower negative utility, the implementation of it would most likely cross the privacy line. This in turn increases negative utility. For example, Facebook may attempt to link the author of an article on some site to an individual account on Facebook for an added level of author verification. Since this has implications in terms of privacy, we feel that author authentication is not an angle that Facebook should approach this problem from.
 
 
 
@@ -69,7 +69,6 @@ In addition, because the information taken by the Facebook crawler is entirely d
 
 
 
-\section{Author Credibility: Zane}
 
 
 
@@ -99,9 +98,7 @@ facebook demographics, http://journals.sagepub.com/doi/abs/10.1177/2053168017720
 trending topic staff fired, https://www.theguardian.com/technology/2016/aug/29/facebook-fires-trending-topics-team-algorithm
 
 
-
-\section{Article Sources: Zane}
-
+\section{Supporting sources: Zane}
 
 
 \section{Cross Reference: Zane}
