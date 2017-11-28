@@ -1,14 +1,17 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
+\usepackage{mathptmx}
+\usepackage{kantlipsum}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
 \usepackage{graphicx}
-\usepackage{courier}
+
+
 
 \title{Detecting ``Fake News" on Facebook}
-\author{Hannah Eyre\\ Zane Zakraisek}
-\usepackage[margin=1.0in]{geometry}
-
-
+\author{Hannah Eyre \and Zane Zakraisek}
 \begin{document}
 \maketitle
+\setstretch{1.2}
 
 The term ``Fake News" gained popularity during the United States' 2016 Presidential Election to describe a rapidly spreading phenomena of news articles deliberately spreading false information and hoaxes, often through attention grabbing headlines or headlines that resemble legitimate sources \cite{guardian}. It became particularly notorious on social media sites and Facebook in particular, where the top 20 articles from hoax sites and hyperpartisan blogs garnered more user interaction between August 1st and election day on November 8th than the top 20 articles from a variety of established news sources such as {\it The New York Times}, {\it Washington Post}, {\it Business Insider}, and Fox News \cite{buzzfeed}.
 
@@ -32,9 +35,18 @@ As an increasingly global and hotly contested issue, we would like to to explore
 When analyzing any issue, it's important to define what framework you're working in, along with what premisses your arguments are based on. During our analyzation of the Facebook's role in censorship, we'll be working under a utilitarian framework. In particular, we'll be using a utilitarian framework designed to minimize the harm. We have chosen this particular form of utilitarianism for a few different reasons. If you examine the role that fake news has played in the numerous events mentioned, it's evident that the outcome is negative in a large majority of occurrences. It's true that news in general on Facebook has the potential to result in positive utility among its readers, but as we've seen, more often than not the potential negatives don't come close to outweighing the corresponding positives. As a result, while it's important to attempt to maintain the positive utility brought about by Facebook's news feeds, we believe that it's far more important to try to minimize the corresponding negative utility.
 
 \paragraph{}
-As we address each of these eight topics, the format shall be as follows. We'll first examine the outcome if Facebook chose not to implement this fake news filtering mechanism. Next, we'll examine the outcome if Facebook chose to implement the mechanism. Lastly, we'll weigh the different utilities and select the one that we feel minimizes the negative utility. In addition to this, we'll also be examining whether or not the method is even technically feasible to implement. The final outcome for each point will be a combination of the two points. 
+As we address each of these eight points, the format shall be as follows. We'll first examine the outcome if Facebook chose not to implement this fake news filtering mechanism. Next, we'll examine the outcome if Facebook chose to implement the mechanism. Lastly, we'll weigh the different utilities and select the one that we feel minimizes the negative utility. In addition to this, we'll also be examining whether or not the method is even technically feasible to implement. The final outcome for each point will be a combination of the two points. 
+
+
 
 \section{Credible sources: Zane}
+The first method in combatting the spreading of fake news is to check whether the article in question comes from a credible source. It's important to distinguish this from point three which states to check the credibility of the \textit{author}. Here we're focused on the credibility of the \textit{website}. To start off, we'll examine the utility if Facebook chose \textit{not to} implement this source credibility check. Although Facebook currently implements a very light form of censorship (CITE), the scenario would be quite similar to how Facebook currently monitors articles, which is very little. While most articles that Facebook feeds users are based off of topics that they've shown interest in, nearly every Facebook user has probably been shown an article from an underground website that someone on their friends list has liked or shared. If Facebook didn't implement source credibility prioritization, then the effect of one person sharing an article like this can have quite a negative outcome. The article in question can easily make its way to hundreds of people.
+
+Now assume Facebook was to implement source credibility prioritization. In this same scenario, if someone was to like or share a post, Facebook could first check its feedback for that particular site. If there is enough feedback for the cite, and the score is negative, Facebook could deprioritize the site on other people's news feeds by a factor of the magnitude of the negative score. Likewise, if the cite has a positive score, Facebook could choose to display the article as it normally would, or maybe even prioritize it higher. From a utility perspective, this has the potential to significantly reduce negative utility brought about by fake cites. On the other hand, there does exist the potential to filter out some cites which many people may find to be \textit{good}. In other words, this has the potential to significantly decrease negative utility, with a smaller side effect of decreasing some positive utility. From an overall perspective however, implementing source credibility prioritization has the net effect of decreasing negative utility
+
+In terms of the technical feasibility of this point, we feel like it one of the lowest hanging fruit in the pursuit of diminishing fake news. Once possibility would involve Facebook storing a few metrics for a site based upon feedback received by readers. Facebook already has a way to flag particular articles as inappropriate. In the same way, Facebook could allow a reader to optionally rate the credibility of the article or the site in general, and use these ratings to prioritize and deprioritize sites.
+
+
 \section{Reading Beyond the Headline}
 
 When posting an external link to Facebook, information is drawn from the content inside \texttt{meta} elements of the page source by Facebook's web crawler and placed into a preview on the post itself. If an element labeled according to the Open Graph protocol, the crawler will place it in the link preview on the site \cite{fbwebmaster}. With this system in place, every linked website will appear the same on a users news feed. Any site can determine how its posts show up when linked on Facebook, regardless of the quality of the content or site itself. \\
