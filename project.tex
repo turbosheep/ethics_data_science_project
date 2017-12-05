@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{mathptmx}
-\usepackage{kantlipsum}
+%\usepackage{kantlipsum}
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}
 \usepackage{graphicx}
@@ -98,11 +98,17 @@ facebook demographics, http://journals.sagepub.com/doi/abs/10.1177/2053168017720
 trending topic staff fired, https://www.theguardian.com/technology/2016/aug/29/facebook-fires-trending-topics-team-algorithm
 
 
-\section{Supporting sources: Zane}
-
 
 \section{Cross Reference: Zane}
 
+
+
+\section{Supporting sources: Zane}
+The final method for identifying fake news is to check supporting sources (if any) and make sure they abide by the same rules. In other words, this method attacks the problem with a recursive approach. When a user shares an article on the site, the fake news algorithm could take a depth first approach at calculating a trustworthiness metric. This can be done by first calculating the trustworthiest of the sources linked to in the article, and then using this metric in the overall trustworthiness calculation for the main article. 
+
+From a utilitarian perspective where our main goal is to minimize the amount of negative utility brought about by fake articles, we feel that implementing this method has a few angles to consider. Since this method is basically taking the other methods that we feel are appropriate, and applying them in a recursive manner, we feel that for the most part this would be an extra step in minimizing the spread of fake news. One point to keep in mind however is that by taking a recursive approach, we may be rating the credibility of one page based on the credibility of a page with multiple degrees of separation that have virtually nothing to do with each other. Also, as mentioned in \textit{Credible Cites and Sources}, we don't have a way to flag a link with the context that it's being cited in. For example, if an author is citing a fake news article with the intention of pointing out the fake news, the trustworthiness metric should somehow understand this context, and not use this against the articles score.
+
+In terms of the technical feasibility of the implementation, there are a few issues that would make this point difficult to implement. The first hurdle is that there would have to be some kind of standardization to the method that sites use to track citations and references. Most sites that people read have a nonstandard citations section at the bottom of the page. Although this conveys the required information to the \textit{reader}, it fails to be parsable by a web crawler. Additionally, this depth first approach to calculating source credibility would involve storing a large amount of metadata. LINK SHORTENERS
 
 
 \paragraph{Final utility based on points above}
