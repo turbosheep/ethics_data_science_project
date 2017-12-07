@@ -96,9 +96,13 @@ trending topic staff fired, https://www.theguardian.com/technology/2016/aug/29/f
 
 
 
-\section{Cross Reference: Zane}
+\section{Cross reference with fact-checking sites: Zane}
+The next method for identifying fake news on Facebook is to implement fact checking for an article. In order to determine a score for a link ahead of time before appearing on a user's screen, Facebook would have to had parsed the article and somehow fact check it.
 
+From a utilitarian perspective, we feel that on the surface, this method seems like it has the potential to greatly hinder the spread of fake news. The major downside that we see though is that often, the articles linked to on Facebook are not formally written scholar articles, but rather more casual ones. In these types of articles, opinions are presented as facts, and vice-versa. We feel that 
+#Some people's 'fact' are other's opinions.
 
+In terms of the technical feasibility, the same argument can be made here. From an NLP perspective, it would be challenging enough to even write a method that can distinguish fact from opinion.
 
 \section{Supporting sources: Zane}
 The final method for identifying fake news is to check supporting sources (if any) and make sure they abide by the same rules. In other words, this method attacks the problem with a recursive approach. When a user shares an article on the site, the fake news algorithm could take a depth first approach at calculating a trustworthiness metric. This can be done by first calculating the trustworthiest of the sources linked to in the article, and then using this metric in the overall trustworthiness calculation for the main article. 
